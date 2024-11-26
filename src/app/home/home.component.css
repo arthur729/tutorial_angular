@@ -1,0 +1,50 @@
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+input[type="text"] {
+    border: 2px solid black; /* Borda preta inicial */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 8px; /* Espaço interno */
+    transition: border-color 0.3s ease; 
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+input:hover {
+    border-color: blue; /* Muda para azul ao passar o mouse */
+  }
+  button {
+    padding: 10px;
+    border: solid 1px var(--primary-color); /* Borda principal */
+    background: var(--primary-color); /* Cor de fundo */
+    color: rgb(89, 0, 255); /* Cor do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 8px rgba(89, 0, 255, 0.5); /* Cor ao redor do botão */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transições suaves */
+  }
+  
+  button:hover {
+    box-shadow: 0 0 12px rgba(89, 0, 255, 0.8); /* Efeito mais forte ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento do botão */
+  }
+  
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }   
+}
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }    
+}
